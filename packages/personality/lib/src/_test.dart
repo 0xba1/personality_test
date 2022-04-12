@@ -4,6 +4,9 @@ import 'package:personality/src/_type.dart';
 
 /// {@template test}
 /// A personality test
+/// ```dart
+/// PersonalityTest.questions -> List<Question>
+/// ```
 /// {@end_template}
 class PersonalityTest {
   /// {@macro test}
@@ -17,7 +20,7 @@ class PersonalityTest {
   ///
   /// ```dart
   /// PersonalityTest(questions: ...)
-  ///   .computePersonality([0, 2, 1, 3])
+  ///   .computePersonality([0, 2, 1, 3, 1])
   ///
   ///   -> Result(percent: 50, type: Personality.middle)
   /// ```
@@ -25,6 +28,11 @@ class PersonalityTest {
   /// 1: Option B,
   /// 2: Option C,
   /// 3: Option D
+  // This method adds the scores from 5 questions (assigned to total),
+  // total ranges from from -10 to +10
+  // -10: Very extroverted
+  // +10: Very introverted
+  // 0: Half introvert, half extrovert
   Result computePersonality({required List<int> answers}) {
     var total = 0;
     for (var i = 0; i < questions.length; i++) {
