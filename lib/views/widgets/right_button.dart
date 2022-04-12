@@ -5,14 +5,11 @@ import 'package:personality_test/views/screens/result.dart';
 import 'package:provider/provider.dart';
 
 /// {@template right}
-///
+/// Test screen button
 /// {@end_template}
 class RightButton extends StatelessWidget {
   /// {@macro right}
-  const RightButton({Key? key, required this.callback}) : super(key: key);
-
-  /// Fade transition call
-  final void Function() callback;
+  const RightButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +52,6 @@ class RightButton extends StatelessWidget {
             return;
           }
           testProvider.nextQuestion();
-          callback();
         },
         child: const Text(
           'Next',

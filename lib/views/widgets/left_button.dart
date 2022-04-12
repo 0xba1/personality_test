@@ -3,14 +3,11 @@ import 'package:personality_test/controllers/test_provider.dart';
 import 'package:provider/provider.dart';
 
 /// {@template left}
-///
+/// Test screen button
 /// {@end_template}
 class LeftButton extends StatelessWidget {
   /// {@macro left}
-  const LeftButton({Key? key, required this.callback}) : super(key: key);
-
-  /// Fade transition call
-  final void Function() callback;
+  const LeftButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +23,7 @@ class LeftButton extends StatelessWidget {
       );
     } else {
       return ElevatedButton(
-        onPressed: () {
-          testProvider.prevQuestion();
-          callback();
-        },
+        onPressed: testProvider.prevQuestion,
         child: const Text(
           'Previous',
         ),

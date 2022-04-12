@@ -47,7 +47,9 @@ class _HomeButtonState extends State<HomeButton> {
               clicked = true;
             });
             final test = await FakeBackend().fetchTest();
-
+            setState(() {
+              clicked = false;
+            });
             // ignore: use_build_context_synchronously, unawaited_futures
             Navigator.push<void>(
               context,
@@ -60,9 +62,6 @@ class _HomeButtonState extends State<HomeButton> {
                 ),
               ),
             );
-            setState(() {
-              clicked = false;
-            });
           },
           child: Icon(
             Icons.forward_rounded,
