@@ -5,6 +5,12 @@ A flutter cross-platform app to know your personality(introvert or extrovert) ba
 ## Getting started
 [Install flutter](https://docs.flutter.dev/get-started/install)
 
+![](https://github.com/0xba1/personality_test/blob/main/screenshots/pt1.png?raw=true)
+
+![](https://github.com/0xba1/personality_test/blob/main/screenshots/pt2.png?raw=true)
+
+![](https://github.com/0xba1/personality_test/blob/main/screenshots/pt3.png?raw=true)
+
 ```bash
 flutter run
 ```
