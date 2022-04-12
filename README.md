@@ -8,7 +8,8 @@ A flutter cross-platform app to know your personality(introvert or extrovert) ba
 
 ## Getting started
 
-[Install flutter](https://docs.flutter.dev/get-started/install)
+- [Install flutter](https://docs.flutter.dev/get-started/install)
+- Build and run app
 
 ```bash
 flutter run

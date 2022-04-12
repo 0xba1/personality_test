@@ -20,6 +20,17 @@ class _HomeButtonState extends State<HomeButton> {
   bool clicked = false;
   @override
   Widget build(BuildContext context) {
+    if (clicked) {
+      return SizedBox(
+        height: 200,
+        width: 200,
+        child: Center(
+          child: CircularProgressIndicator(
+            color: Theme.of(context).colorScheme.primary,
+          ),
+        ),
+      );
+    }
     return Container(
       height: 200,
       width: 200,
@@ -49,6 +60,9 @@ class _HomeButtonState extends State<HomeButton> {
                 ),
               ),
             );
+            setState(() {
+              clicked = false;
+            });
           },
           child: Icon(
             Icons.forward_rounded,
